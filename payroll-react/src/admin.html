@@ -1,0 +1,85 @@
+<div className="App">
+    <header className="App-header" id="title">
+        <h1>$ PAYR0LL // ADMIN</h1>
+    </header>
+
+    <body>
+        <div>
+            <h2>Employee Management</h2>
+
+            <div>
+                <h3>Get Employee Details</h3>
+
+                <label for="getEmployeeDetailsAddress">Employee Address:</label>
+                <input type="text" id="getEmployeeDetailsAddress"><br/>
+
+                <button onclick="getEmployeeDetails()">Get Details</button><br/>
+                <p id="employeeDetails"></p>
+            </div>
+
+            <div>
+                <h3>Update Employee Salary</h3>
+
+                <label for="updateEmployeeAddress">Employee Address:</label>
+                <input type="text" id="updateEmployeeAddress"><br/>
+
+                <label for="newSalary">New Salary:</label>
+                <input type="number" id="newSalary"><br/>
+
+                <button onclick="updateEmployeeSalary()">Update</button>
+            </div>
+
+            <div>
+                <h3>Add Employee</h3>
+
+                <label for="employeeAddress">Employee Address:</label>
+                <input type="text" id="employeeAddress"><br/>
+
+                <label for="initialSalary">Initial Salary:</label>
+                <input type="number" id="initialSalary"><br/>
+
+                <button onclick="addEmployee()">Add</button>
+            </div>
+
+            <div>
+                <h3>Terminate Employee</h3>
+
+                <label for="terminateEmployeeAddress">Employee Address:</label>
+                <input type="text" id="terminateEmployeeAddress"><br/>
+
+                <button onclick="terminateEmployee()" id="terminated">Terminate</button>
+            </div>
+        </div>
+
+        <hr/>
+        <div>
+            <h2>Salary Management</h2>
+
+            <div>
+                <h3>Pay Salary</h3>
+
+                <label for="paySalaryAddress">Employee Address:</label>
+                <input type="text" id="paySalaryAddress"><br/>
+
+                <button onclick="paySalary()">Pay Salary</button>
+            </div>
+
+            <div>
+                <h3>Get Recipient Expenses</h3>
+
+                <label for="getRecipientExpensesAddress">Recipient Address:</label>
+                <input type="text" id="getRecipientExpensesAddress"><br/>
+
+                <button onclick="getRecipientExpenses()">Get Expenses</button><br/>
+                <p id="recipientExpenses"></p>
+            </div>
+
+            <div>
+                <h3>Get Total Expenses</h3>
+
+                <button onclick="getTotalExpenses()">Get Expenses</button><br/>
+                <p id="totalExpenses"></p>
+            </div>
+        </div>
+    </body>
+</div>
