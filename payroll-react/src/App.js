@@ -31,7 +31,7 @@ function App() {
               <h4>Add Expense</h4>
 
               <label for="expenseAmount">Amount:</label>
-              <input type="number" id="expenseAmount"/>
+              <input type="number" id="expenseAmount"/><br/>
 
               <label for="expenseCategory">Category:</label>
               <select id="expenseCategory">
@@ -39,7 +39,7 @@ function App() {
                   <option value="1">Supplies</option>
                   <option value="2">Services</option>
                   <option value="3">Equipment</option>
-              </select>
+              </select><br/>
               
               <button onclick="addExpense()">Add Expense</button>
             <p><i>Automatically deducted from salary</i></p>
@@ -51,13 +51,13 @@ function App() {
           <h2>Send Payment</h2>
 
           <label for="paymentRecipient">Recipient Address:</label>
-          <input type="text" id="paymentRecipient"/>
+          <input type="text" id="paymentRecipient"/><br/>
 
           <label for="paymentAmount">Amount:</label>
-          <input type="number" id="paymentAmount"/>
+          <input type="number" id="paymentAmount"/><br/>
 
           <label for="paymentDescription">Description:</label>
-          <input type="text" id="paymentDescription"/>
+          <input type="text" id="paymentDescription"/><br/>
 
           <button onclick="sendPayment()">Send Payment</button>
         </div>
@@ -73,10 +73,11 @@ function App() {
             <select id="accountType">
               <option value="0">Checking</option>
               <option value="1">Savings</option>
-            </select>
+            </select><br/>
             
             <label for="depositAmount">Amount: </label>
-            <input id="depositAmount"/>
+            <input id="depositAmount"/><br/>
+            
             <button>Complete deposit</button>
           </div>
           
@@ -87,10 +88,10 @@ function App() {
             <select id="accountType">
               <option value="0">Checking</option>
               <option value="1">Savings</option>
-            </select>
+            </select><br/>
 
             <label for="depositAmount">Amount: </label>
-            <input id="depositAmount"/>
+            <input id="depositAmount"/><br/>
 
             <button>Complete withdrawal</button>
           </div>
