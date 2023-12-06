@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,54 @@
   to {
     transform: rotate(360deg);
   }
+} */
+*
+{
+  font-family:sans-serif;
+}
+header
+{
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 0px 0px 40px 0px;
+}
+body
+{
+  margin: 10px;
+}
+hr
+{
+  margin: 40px 0px;
+}
+i
+{
+  font-size: 70%;
+}
+input, select
+{
+  margin: 5px 0px;
+}
+button
+{
+  padding: 5px;
+}
+#login
+{
+  box-shadow: 5px 2px 2px gray;
+  padding: 20px;
+  width: fit-content;
+  border: 1px solid gray;
+}
+#login-title
+{
+    margin: 0px 0px 25px 0px;
+}
+#time
+{
+  margin: 0px 0px 40px 0px
+}
+#money
+{
+  margin: 0px 0px 30px 10px;
 }
