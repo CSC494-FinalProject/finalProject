@@ -29,8 +29,10 @@ function App() {
 
           <div>
               <h4>Add Expense</h4>
+
               <label for="expenseAmount">Amount:</label>
               <input type="number" id="expenseAmount"/>
+
               <label for="expenseCategory">Category:</label>
               <select id="expenseCategory">
                   <option value="0">General</option>
@@ -38,6 +40,7 @@ function App() {
                   <option value="2">Services</option>
                   <option value="3">Equipment</option>
               </select>
+              
               <button onclick="addExpense()">Add Expense</button>
             <p><i>Automatically deducted from salary</i></p>
           </div>
@@ -46,17 +49,52 @@ function App() {
         <hr/>
         <div>
           <h2>Send Payment</h2>
+
           <label for="paymentRecipient">Recipient Address:</label>
           <input type="text" id="paymentRecipient"/>
+
           <label for="paymentAmount">Amount:</label>
           <input type="number" id="paymentAmount"/>
+
           <label for="paymentDescription">Description:</label>
           <input type="text" id="paymentDescription"/>
+
           <button onclick="sendPayment()">Send Payment</button>
         </div>
 
         <hr/>
-        <h2>Deposits:</h2>
+        <div>
+          <h2>Deposits/Withdrawals:</h2>
+          
+          <div>
+            <h3>Deposits:</h3>
+
+            <label for="accountType">Select account</label>
+            <select id="accountType">
+              <option value="0">Checking</option>
+              <option value="1">Savings</option>
+            </select>
+            
+            <label for="depositAmount">Amount: </label>
+            <input id="depositAmount"/>
+            <button>Complete deposit</button>
+          </div>
+          
+          <div>
+            <h3>Withdrawals:</h3>
+
+            <label for="accountType">Select account</label>
+            <select id="accountType">
+              <option value="0">Checking</option>
+              <option value="1">Savings</option>
+            </select>
+
+            <label for="depositAmount">Amount: </label>
+            <input id="depositAmount"/>
+
+            <button>Complete withdrawal</button>
+          </div>
+        </div>
       </body>
     </div>
   );
