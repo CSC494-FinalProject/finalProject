@@ -41,7 +41,7 @@ function App() {
                   <option value="3">Equipment</option>
               </select><br/>
               
-              <button onclick="addExpense()">Add Expense</button>
+              <button onclick="addExpense()">Add</button>
             <p><i>Automatically deducted from salary</i></p>
           </div>
         </div>
@@ -59,7 +59,7 @@ function App() {
           <label for="paymentDescription">Description:</label>
           <input type="text" id="paymentDescription"/><br/>
 
-          <button onclick="sendPayment()">Send Payment</button>
+          <button onclick="sendPayment()">Send</button>
         </div>
 
         <hr/>
