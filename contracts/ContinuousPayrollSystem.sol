@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ContinuousPayrollSystem {
+contract ContinuousPayrollSystem { 
     address public owner;
     mapping(address => Employee) public employees;
     mapping(address => uint256) public recipientExpenses;
