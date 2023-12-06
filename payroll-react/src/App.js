@@ -19,7 +19,7 @@ function App() {
     </div>
     <div>
       <h3>Salary earned so far:</h3>
-      <h2></b>$65.4321</b></h2>
+      <h2>$65.4321</h2>
       <p>Clock in time: 07:28</p>
       <p>Clock out time: ...</p>
     </div>
