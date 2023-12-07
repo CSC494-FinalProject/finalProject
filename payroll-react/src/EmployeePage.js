@@ -23,9 +23,26 @@ function EmployeePage({onLogout}) {
   const [web3, setWeb3] = useState(null);
   const [contract, setContract] = useState(null);
   const [account, setAccount] = useState(null);
+  const [salary, setSalary] = useState(0);
+  const [clockInTime, setClockInTime] = useState(new Date().toLocaleTimeString());
+  const [loggedInTime, setLoggedInTime] = useState(null);
 
   useEffect(() => {
     async function initWeb3() {
+
+
+      updateClockInTime();
+
+      const salaryInterval = setInterval(() => {
+        setSalary((prevSalary) => prevSalary + 0.02);
+      }, 1000);
+
+      const clockInterval = setInterval(() => {
+        updateClockInTime();
+      }, 1000);
+
+      
+
       if (window.ethereum) {
         try {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -40,16 +57,28 @@ function EmployeePage({onLogout}) {
 
           const accounts = await web3Instance.eth.getAccounts();
           setAccount(accounts[0]);
+
+
+          setLoggedInTime(new Date().toLocaleTimeString());
         } catch (error) {
           console.error('Error connecting to Ethereum provider', error);
         }
       } else {
         console.error('Please install MetaMask or another Ethereum provider');
       }
+
+      return () => {
+        clearInterval(salaryInterval);
+        clearInterval(clockInterval);
+      };
     }
 
     initWeb3();
   }, []);
+
+  const updateClockInTime = () => {
+    setClockInTime(new Date().toLocaleTimeString());
+  };
 
   const addExpense = async () => {
     const expenseAmount = document.getElementById('expenseAmount').value;
@@ -94,8 +123,8 @@ function EmployeePage({onLogout}) {
           <h2>Real-time payment:</h2>
           <div>
             <h3>Salary earned so far:</h3>
-            <h2 id="money">$65.4321</h2>
-            <p>Clock in time: 07:28</p>
+            <h2 id="money">${salary.toFixed(2)}</h2>
+            <p>Clock in time: {loggedInTime}</p>
             <p id="time">Clock out time: ...</p>
           </div>
 
